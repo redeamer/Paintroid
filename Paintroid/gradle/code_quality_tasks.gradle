@@ -27,7 +27,7 @@ task checkstyle(type: Checkstyle) {
 
     // needed for console output of warnings/errors
     showViolations true
-    ignoreFailures false
+    ignoreFailures true
 
     reports {
         xml.enabled = true
@@ -42,7 +42,7 @@ task pmd(type: Pmd) {
     include '**/*.java'
     exclude '**/gen/**', '**/build/**', '**/res/**'
 
-    ignoreFailures false
+    ignoreFailures true
 
     reports {
         xml.enabled = true
